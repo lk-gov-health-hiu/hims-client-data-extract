@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PatientdemographicCreateDlg" widgetVar="PatientdemographicCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreatePatientdemographicTitle}">
+            <h:form id="PatientdemographicCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{patientdemographicController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientID}" for="patientID" />
+                        <p:inputText id="patientID" value="#{patientdemographicController.selected.patientID}" title="#{bundle.CreatePatientdemographicTitle_patientID}" required="true" requiredMessage="#{bundle.CreatePatientdemographicRequiredMessage_patientID}"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientNIC}" for="patientNIC" />
+                        <p:inputText id="patientNIC" value="#{patientdemographicController.selected.patientNIC}" title="#{bundle.CreatePatientdemographicTitle_patientNIC}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientPassport}" for="patientPassport" />
+                        <p:inputText id="patientPassport" value="#{patientdemographicController.selected.patientPassport}" title="#{bundle.CreatePatientdemographicTitle_patientPassport}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientDrivingLicense}" for="patientDrivingLicense" />
+                        <p:inputText id="patientDrivingLicense" value="#{patientdemographicController.selected.patientDrivingLicense}" title="#{bundle.CreatePatientdemographicTitle_patientDrivingLicense}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_motherBHT}" for="motherBHT" />
+                        <p:inputText id="motherBHT" value="#{patientdemographicController.selected.motherBHT}" title="#{bundle.CreatePatientdemographicTitle_motherBHT}" required="true" requiredMessage="#{bundle.CreatePatientdemographicRequiredMessage_motherBHT}"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientPersonalTitle}" for="patientPersonalTitle" />
+                        <p:inputText id="patientPersonalTitle" value="#{patientdemographicController.selected.patientPersonalTitle}" title="#{bundle.CreatePatientdemographicTitle_patientPersonalTitle}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientName}" for="patientName" />
+                        <p:inputText id="patientName" value="#{patientdemographicController.selected.patientName}" title="#{bundle.CreatePatientdemographicTitle_patientName}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientSex}" for="patientSex" />
+                        <p:inputText id="patientSex" value="#{patientdemographicController.selected.patientSex}" title="#{bundle.CreatePatientdemographicTitle_patientSex}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientDateofbirth}" for="patientDateofbirth" />
+                        <p:inputText id="patientDateofbirth" value="#{patientdemographicController.selected.patientDateofbirth}" title="#{bundle.CreatePatientdemographicTitle_patientDateofbirth}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientAge}" for="patientAge" />
+                        <p:inputText id="patientAge" value="#{patientdemographicController.selected.patientAge}" title="#{bundle.CreatePatientdemographicTitle_patientAge}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientCitizenship}" for="patientCitizenship" />
+                        <p:inputText id="patientCitizenship" value="#{patientdemographicController.selected.patientCitizenship}" title="#{bundle.CreatePatientdemographicTitle_patientCitizenship}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientEthnicgroup}" for="patientEthnicgroup" />
+                        <p:inputText id="patientEthnicgroup" value="#{patientdemographicController.selected.patientEthnicgroup}" title="#{bundle.CreatePatientdemographicTitle_patientEthnicgroup}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientReligion}" for="patientReligion" />
+                        <p:inputText id="patientReligion" value="#{patientdemographicController.selected.patientReligion}" title="#{bundle.CreatePatientdemographicTitle_patientReligion}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientMaritalstatus}" for="patientMaritalstatus" />
+                        <p:inputText id="patientMaritalstatus" value="#{patientdemographicController.selected.patientMaritalstatus}" title="#{bundle.CreatePatientdemographicTitle_patientMaritalstatus}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientAddressLine01}" for="patientAddressLine01" />
+                        <p:inputText id="patientAddressLine01" value="#{patientdemographicController.selected.patientAddressLine01}" title="#{bundle.CreatePatientdemographicTitle_patientAddressLine01}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientAddressLine02}" for="patientAddressLine02" />
+                        <p:inputText id="patientAddressLine02" value="#{patientdemographicController.selected.patientAddressLine02}" title="#{bundle.CreatePatientdemographicTitle_patientAddressLine02}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientAddressLine03}" for="patientAddressLine03" />
+                        <p:inputText id="patientAddressLine03" value="#{patientdemographicController.selected.patientAddressLine03}" title="#{bundle.CreatePatientdemographicTitle_patientAddressLine03}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientAddressDSdivision}" for="patientAddressDSdivision" />
+                        <p:inputText id="patientAddressDSdivision" value="#{patientdemographicController.selected.patientAddressDSdivision}" title="#{bundle.CreatePatientdemographicTitle_patientAddressDSdivision}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientAddressDistrict}" for="patientAddressDistrict" />
+                        <p:inputText id="patientAddressDistrict" value="#{patientdemographicController.selected.patientAddressDistrict}" title="#{bundle.CreatePatientdemographicTitle_patientAddressDistrict}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientAddressPHMDivision}" for="patientAddressPHMDivision" />
+                        <p:inputText id="patientAddressPHMDivision" value="#{patientdemographicController.selected.patientAddressPHMDivision}" title="#{bundle.CreatePatientdemographicTitle_patientAddressPHMDivision}" required="true" requiredMessage="#{bundle.CreatePatientdemographicRequiredMessage_patientAddressPHMDivision}"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientAddressGNDivision}" for="patientAddressGNDivision" />
+                        <p:inputText id="patientAddressGNDivision" value="#{patientdemographicController.selected.patientAddressGNDivision}" title="#{bundle.CreatePatientdemographicTitle_patientAddressGNDivision}" required="true" requiredMessage="#{bundle.CreatePatientdemographicRequiredMessage_patientAddressGNDivision}"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientContactLand01}" for="patientContactLand01" />
+                        <p:inputText id="patientContactLand01" value="#{patientdemographicController.selected.patientContactLand01}" title="#{bundle.CreatePatientdemographicTitle_patientContactLand01}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientContactLand02}" for="patientContactLand02" />
+                        <p:inputText id="patientContactLand02" value="#{patientdemographicController.selected.patientContactLand02}" title="#{bundle.CreatePatientdemographicTitle_patientContactLand02}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientContactMobile01}" for="patientContactMobile01" />
+                        <p:inputText id="patientContactMobile01" value="#{patientdemographicController.selected.patientContactMobile01}" title="#{bundle.CreatePatientdemographicTitle_patientContactMobile01}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientContactMobile02}" for="patientContactMobile02" />
+                        <p:inputText id="patientContactMobile02" value="#{patientdemographicController.selected.patientContactMobile02}" title="#{bundle.CreatePatientdemographicTitle_patientContactMobile02}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientContactEmail}" for="patientContactEmail" />
+                        <p:inputText id="patientContactEmail" value="#{patientdemographicController.selected.patientContactEmail}" title="#{bundle.CreatePatientdemographicTitle_patientContactEmail}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientDeath}" for="patientDeath" />
+                        <p:inputText id="patientDeath" value="#{patientdemographicController.selected.patientDeath}" title="#{bundle.CreatePatientdemographicTitle_patientDeath}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_drugAllergies}" for="drugAllergies" />
+                        <p:inputTextarea rows="4" cols="30" id="drugAllergies" value="#{patientdemographicController.selected.drugAllergies}" title="#{bundle.CreatePatientdemographicTitle_drugAllergies}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_foodAllergies}" for="foodAllergies" />
+                        <p:inputTextarea rows="4" cols="30" id="foodAllergies" value="#{patientdemographicController.selected.foodAllergies}" title="#{bundle.CreatePatientdemographicTitle_foodAllergies}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_otherAllergies}" for="otherAllergies" />
+                        <p:inputTextarea rows="4" cols="30" id="otherAllergies" value="#{patientdemographicController.selected.otherAllergies}" title="#{bundle.CreatePatientdemographicTitle_otherAllergies}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_registrationDate}" for="registrationDate" />
+                        <p:calendar id="registrationDate" pattern="MM/dd/yyyy" value="#{patientdemographicController.selected.registrationDate}" title="#{bundle.EditPatientdemographicTitle_registrationDate}" required="true" requiredMessage="#{bundle.EditPatientdemographicRequiredMessage_registrationDate}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_registrationTime}" for="registrationTime" />
+                        <p:calendar id="registrationTime" pattern="HH:mm:ss" value="#{patientdemographicController.selected.registrationTime}" title="#{bundle.EditPatientdemographicTitle_registrationTime}" required="true" requiredMessage="#{bundle.EditPatientdemographicRequiredMessage_registrationTime}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_user}" for="user" />
+                        <p:inputText id="user" value="#{patientdemographicController.selected.user}" title="#{bundle.CreatePatientdemographicTitle_user}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_demographicinsertedOn}" for="demographicinsertedOn" />
+                        <p:calendar id="demographicinsertedOn" pattern="MM/dd/yyyy HH:mm:ss" value="#{patientdemographicController.selected.demographicinsertedOn}" title="#{bundle.EditPatientdemographicTitle_demographicinsertedOn}"  showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_demographiclastupdateBy}" for="demographiclastupdateBy" />
+                        <p:inputText id="demographiclastupdateBy" value="#{patientdemographicController.selected.demographiclastupdateBy}" title="#{bundle.CreatePatientdemographicTitle_demographiclastupdateBy}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_demographiclastupdateOn}" for="demographiclastupdateOn" />
+                        <p:calendar id="demographiclastupdateOn" pattern="MM/dd/yyyy HH:mm:ss" value="#{patientdemographicController.selected.demographiclastupdateOn}" title="#{bundle.EditPatientdemographicTitle_demographiclastupdateOn}"  showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_recordCancelled}" for="recordCancelled" />
+                        <p:inputText id="recordCancelled" value="#{patientdemographicController.selected.recordCancelled}" title="#{bundle.CreatePatientdemographicTitle_recordCancelled}" required="true" requiredMessage="#{bundle.CreatePatientdemographicRequiredMessage_recordCancelled}"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_registeredDateTime}" for="registeredDateTime" />
+                        <p:calendar id="registeredDateTime" pattern="MM/dd/yyyy HH:mm:ss" value="#{patientdemographicController.selected.registeredDateTime}" title="#{bundle.EditPatientdemographicTitle_registeredDateTime}" required="true" requiredMessage="#{bundle.EditPatientdemographicRequiredMessage_registeredDateTime}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_updateBy}" for="updateBy" />
+                        <p:inputText id="updateBy" value="#{patientdemographicController.selected.updateBy}" title="#{bundle.CreatePatientdemographicTitle_updateBy}" required="true" requiredMessage="#{bundle.CreatePatientdemographicRequiredMessage_updateBy}"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_updateDateTime}" for="updateDateTime" />
+                        <p:calendar id="updateDateTime" pattern="MM/dd/yyyy HH:mm:ss" value="#{patientdemographicController.selected.updateDateTime}" title="#{bundle.EditPatientdemographicTitle_updateDateTime}" required="true" requiredMessage="#{bundle.EditPatientdemographicRequiredMessage_updateDateTime}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_patientBloodType}" for="patientBloodType" />
+                        <p:inputText id="patientBloodType" value="#{patientdemographicController.selected.patientBloodType}" title="#{bundle.CreatePatientdemographicTitle_patientBloodType}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_lastUpdate}" for="lastUpdate" />
+                        <p:calendar id="lastUpdate" pattern="MM/dd/yyyy HH:mm:ss" value="#{patientdemographicController.selected.lastUpdate}" title="#{bundle.EditPatientdemographicTitle_lastUpdate}"  showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_lastUpdateUser}" for="lastUpdateUser" />
+                        <p:inputText id="lastUpdateUser" value="#{patientdemographicController.selected.lastUpdateUser}" title="#{bundle.CreatePatientdemographicTitle_lastUpdateUser}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_createDate}" for="createDate" />
+                        <p:calendar id="createDate" pattern="MM/dd/yyyy HH:mm:ss" value="#{patientdemographicController.selected.createDate}" title="#{bundle.EditPatientdemographicTitle_createDate}"  showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_createUser}" for="createUser" />
+                        <p:inputText id="createUser" value="#{patientdemographicController.selected.createUser}" title="#{bundle.CreatePatientdemographicTitle_createUser}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_sessionRole}" for="sessionRole" />
+                        <p:inputText id="sessionRole" value="#{patientdemographicController.selected.sessionRole}" title="#{bundle.CreatePatientdemographicTitle_sessionRole}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_sessionDepartment}" for="sessionDepartment" />
+                        <p:inputText id="sessionDepartment" value="#{patientdemographicController.selected.sessionDepartment}" title="#{bundle.CreatePatientdemographicTitle_sessionDepartment}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_sessionUnit}" for="sessionUnit" />
+                        <p:inputText id="sessionUnit" value="#{patientdemographicController.selected.sessionUnit}" title="#{bundle.CreatePatientdemographicTitle_sessionUnit}" />
+                        <p:outputLabel value="#{bundle.CreatePatientdemographicLabel_printcount}" for="printcount" />
+                        <p:inputText id="printcount" value="#{patientdemographicController.selected.printcount}" title="#{bundle.CreatePatientdemographicTitle_printcount}" required="true" requiredMessage="#{bundle.CreatePatientdemographicRequiredMessage_printcount}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{patientdemographicController.create}" value="#{bundle.Save}" update="display,:PatientdemographicListForm:datalist,:growl" oncomplete="handleSubmit(args,'PatientdemographicCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="PatientdemographicCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

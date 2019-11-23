@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PatientdemographicViewDlg" widgetVar="PatientdemographicViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewPatientdemographicTitle}">
+            <h:form id="PatientdemographicViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{patientdemographicController.selected != null}">
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientID}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientID}" title="#{bundle.ViewPatientdemographicTitle_patientID}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientNIC}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientNIC}" title="#{bundle.ViewPatientdemographicTitle_patientNIC}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientPassport}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientPassport}" title="#{bundle.ViewPatientdemographicTitle_patientPassport}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientDrivingLicense}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientDrivingLicense}" title="#{bundle.ViewPatientdemographicTitle_patientDrivingLicense}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_motherBHT}"/>
+                        <h:outputText value="#{patientdemographicController.selected.motherBHT}" title="#{bundle.ViewPatientdemographicTitle_motherBHT}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientPersonalTitle}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientPersonalTitle}" title="#{bundle.ViewPatientdemographicTitle_patientPersonalTitle}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientName}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientName}" title="#{bundle.ViewPatientdemographicTitle_patientName}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientSex}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientSex}" title="#{bundle.ViewPatientdemographicTitle_patientSex}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientDateofbirth}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientDateofbirth}" title="#{bundle.ViewPatientdemographicTitle_patientDateofbirth}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientAge}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientAge}" title="#{bundle.ViewPatientdemographicTitle_patientAge}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientCitizenship}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientCitizenship}" title="#{bundle.ViewPatientdemographicTitle_patientCitizenship}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientEthnicgroup}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientEthnicgroup}" title="#{bundle.ViewPatientdemographicTitle_patientEthnicgroup}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientReligion}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientReligion}" title="#{bundle.ViewPatientdemographicTitle_patientReligion}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientMaritalstatus}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientMaritalstatus}" title="#{bundle.ViewPatientdemographicTitle_patientMaritalstatus}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientAddressLine01}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientAddressLine01}" title="#{bundle.ViewPatientdemographicTitle_patientAddressLine01}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientAddressLine02}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientAddressLine02}" title="#{bundle.ViewPatientdemographicTitle_patientAddressLine02}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientAddressLine03}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientAddressLine03}" title="#{bundle.ViewPatientdemographicTitle_patientAddressLine03}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientAddressDSdivision}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientAddressDSdivision}" title="#{bundle.ViewPatientdemographicTitle_patientAddressDSdivision}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientAddressDistrict}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientAddressDistrict}" title="#{bundle.ViewPatientdemographicTitle_patientAddressDistrict}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientAddressPHMDivision}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientAddressPHMDivision}" title="#{bundle.ViewPatientdemographicTitle_patientAddressPHMDivision}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientAddressGNDivision}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientAddressGNDivision}" title="#{bundle.ViewPatientdemographicTitle_patientAddressGNDivision}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientContactLand01}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientContactLand01}" title="#{bundle.ViewPatientdemographicTitle_patientContactLand01}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientContactLand02}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientContactLand02}" title="#{bundle.ViewPatientdemographicTitle_patientContactLand02}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientContactMobile01}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientContactMobile01}" title="#{bundle.ViewPatientdemographicTitle_patientContactMobile01}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientContactMobile02}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientContactMobile02}" title="#{bundle.ViewPatientdemographicTitle_patientContactMobile02}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientContactEmail}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientContactEmail}" title="#{bundle.ViewPatientdemographicTitle_patientContactEmail}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientDeath}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientDeath}" title="#{bundle.ViewPatientdemographicTitle_patientDeath}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_drugAllergies}"/>
+                        <h:outputText value="#{patientdemographicController.selected.drugAllergies}" title="#{bundle.ViewPatientdemographicTitle_drugAllergies}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_foodAllergies}"/>
+                        <h:outputText value="#{patientdemographicController.selected.foodAllergies}" title="#{bundle.ViewPatientdemographicTitle_foodAllergies}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_otherAllergies}"/>
+                        <h:outputText value="#{patientdemographicController.selected.otherAllergies}" title="#{bundle.ViewPatientdemographicTitle_otherAllergies}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_registrationDate}"/>
+                        <h:outputText value="#{patientdemographicController.selected.registrationDate}" title="#{bundle.ViewPatientdemographicTitle_registrationDate}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_registrationTime}"/>
+                        <h:outputText value="#{patientdemographicController.selected.registrationTime}" title="#{bundle.ViewPatientdemographicTitle_registrationTime}">
+                            <f:convertDateTime pattern="HH:mm:ss" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_user}"/>
+                        <h:outputText value="#{patientdemographicController.selected.user}" title="#{bundle.ViewPatientdemographicTitle_user}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_demographicinsertedOn}"/>
+                        <h:outputText value="#{patientdemographicController.selected.demographicinsertedOn}" title="#{bundle.ViewPatientdemographicTitle_demographicinsertedOn}">
+                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_demographiclastupdateBy}"/>
+                        <h:outputText value="#{patientdemographicController.selected.demographiclastupdateBy}" title="#{bundle.ViewPatientdemographicTitle_demographiclastupdateBy}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_demographiclastupdateOn}"/>
+                        <h:outputText value="#{patientdemographicController.selected.demographiclastupdateOn}" title="#{bundle.ViewPatientdemographicTitle_demographiclastupdateOn}">
+                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_recordCancelled}"/>
+                        <h:outputText value="#{patientdemographicController.selected.recordCancelled}" title="#{bundle.ViewPatientdemographicTitle_recordCancelled}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_registeredDateTime}"/>
+                        <h:outputText value="#{patientdemographicController.selected.registeredDateTime}" title="#{bundle.ViewPatientdemographicTitle_registeredDateTime}">
+                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_updateBy}"/>
+                        <h:outputText value="#{patientdemographicController.selected.updateBy}" title="#{bundle.ViewPatientdemographicTitle_updateBy}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_updateDateTime}"/>
+                        <h:outputText value="#{patientdemographicController.selected.updateDateTime}" title="#{bundle.ViewPatientdemographicTitle_updateDateTime}">
+                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_patientBloodType}"/>
+                        <h:outputText value="#{patientdemographicController.selected.patientBloodType}" title="#{bundle.ViewPatientdemographicTitle_patientBloodType}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_lastUpdate}"/>
+                        <h:outputText value="#{patientdemographicController.selected.lastUpdate}" title="#{bundle.ViewPatientdemographicTitle_lastUpdate}">
+                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_lastUpdateUser}"/>
+                        <h:outputText value="#{patientdemographicController.selected.lastUpdateUser}" title="#{bundle.ViewPatientdemographicTitle_lastUpdateUser}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_createDate}"/>
+                        <h:outputText value="#{patientdemographicController.selected.createDate}" title="#{bundle.ViewPatientdemographicTitle_createDate}">
+                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_createUser}"/>
+                        <h:outputText value="#{patientdemographicController.selected.createUser}" title="#{bundle.ViewPatientdemographicTitle_createUser}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_sessionRole}"/>
+                        <h:outputText value="#{patientdemographicController.selected.sessionRole}" title="#{bundle.ViewPatientdemographicTitle_sessionRole}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_sessionDepartment}"/>
+                        <h:outputText value="#{patientdemographicController.selected.sessionDepartment}" title="#{bundle.ViewPatientdemographicTitle_sessionDepartment}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_sessionUnit}"/>
+                        <h:outputText value="#{patientdemographicController.selected.sessionUnit}" title="#{bundle.ViewPatientdemographicTitle_sessionUnit}"/>
+                        <h:outputText value="#{bundle.ViewPatientdemographicLabel_printcount}"/>
+                        <h:outputText value="#{patientdemographicController.selected.printcount}" title="#{bundle.ViewPatientdemographicTitle_printcount}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="PatientdemographicViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
